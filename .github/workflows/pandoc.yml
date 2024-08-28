@@ -24,11 +24,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      - name: Install
-        uses: pandoc/actions/setup@latest
+
+      - name: Install Pandoc
+        uses: pandoc/actions/setup@v1
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Convert
         run: |
           ./convert.sh
 
